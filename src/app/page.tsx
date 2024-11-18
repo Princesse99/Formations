@@ -3,6 +3,7 @@
 import * as React from "react"
 import Accueil from "@/components/ui/accueil"
 import Contact from "@/components/ui/contact"
+import Experience from "@/components/ui/experience"
 import {
   Menubar,
   MenubarMenu,
@@ -18,7 +19,7 @@ export default function Home() {
       case "accueil":
         return <Accueil />
         case "experiance":
-          return <div><h1>Experiance</h1></div>
+          return <Experience/>
       case "parcours":
         return <div><h1>Parcours</h1></div>
       case "projets":
@@ -41,7 +42,7 @@ export default function Home() {
           <MenubarTrigger className="text-orange-500" onClick={() => setSelectedMenu("accueil")}>Accueil</MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger className="text-orange-500 " onClick={() => setSelectedMenu("experiance")}>Expérience</MenubarTrigger>
+          <MenubarTrigger className="text-orange-500 " onClick={() => setSelectedMenu("experiance")}>Expérience & Education</MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger className="text-orange-500" onClick={() => setSelectedMenu("parcours")}>Parcours</MenubarTrigger>

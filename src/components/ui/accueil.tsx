@@ -5,13 +5,14 @@ function Accueil() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 ">
     
-      <header className="text-center space-y-4 mt-10">
-        <h1 className="text-4xl font-bold text-orange-600">Hi, RAMARONJANAHARY</h1>
-        <h2 className="text-2xl text-gray-800 font-medium">Violette Hiolimalala Harisoa Sarobidy</h2>
-        <p className="text-gray-600 max-w-md mx-auto">
-          Je suis étudiante de l'université de Fianarantsoa au sein de l'EMIT, parcours Informatique.
-        </p>
-      </header>
+    <header className="text-center space-y-4 mt-10 animate-slideUp">
+    <h1 className="text-4xl font-bold text-orange-600 animate-fadeIn duration-1000">Hi, RAMARONJANAHARY</h1>
+
+  <h2 className="text-2xl text-gray-800 font-medium animate-fadeIn">Violette Hiolimalala Harisoa Sarobidy</h2>
+  <p className="text-gray-600 max-w-md mx-auto animate-fadeIn">
+    Je suis étudiante de l'université de Fianarantsoa au sein de l'EMIT, parcours Informatique.
+  </p>
+</header>
 
       
       <div className="relative mt-5">
