@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Facebook,Phone,Mail} from "lucide-react"
 function Contact() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100  ">
@@ -21,8 +21,9 @@ function Contact() {
 
         
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="email">
+          <label className="block text-gray-700 text-sm font-semibold mb-2 " htmlFor="email">
             Email
+           
           </label>
           <input
             type="email"
@@ -54,13 +55,26 @@ function Contact() {
       <img
           src="/images/contact.jpg"
           alt="Profile"
-          className="w-38 h-48 rounded-full object-cover mx-auto shadow-lg border-4 border-orange-500 -mt-32 -ml-44"
+          className="w-38 h-48 rounded-full object-cover mx-auto shadow-lg border-4 border-orange-500 -mt-32 -ml-44 animate-bounceImage"
         />
       </div>
-      <div className='mt-36 -ml-96'>
-        <p className='text-orange-500 font-semibold text-xs'>Fb:Ramaronjanahary violette</p>
-        <p className='text-orange-500 font-semibold text-xs'>Phone:0348944809</p>
-        <p className='text-orange-500 font-semibold text-xs'>Email:ramaronjanaharyviolette@gmail.com</p>
+      <div className="mt-36 -ml-96 space-y-4 text-center">
+        <div className="flex items-center justify-center space-x-2">
+          <Facebook className="text-blue-700 w-5 h-5" />
+          <p className="text-blue-700 font-semibold text-sm">
+            Ramaronjanahary Violette
+          </p>
+        </div>
+        <div className="flex items-center justify-center space-x-2">
+          <Phone className="text-green-600 w-5 h-5" />
+          <p className="text-green-600 font-semibold text-sm">0348944809</p>
+        </div>
+        <div className="flex items-center justify-center space-x-2">
+          <Mail className="text-red-500 w-5 h-5" />
+          <p className="text-red-500 font-semibold text-sm">
+            ramaronjanaharyviolette@gmail.com
+          </p>
+        </div>
       </div>
     </div>
   );

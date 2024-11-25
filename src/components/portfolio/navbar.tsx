@@ -7,7 +7,9 @@ import {
 import Accueil from "@/components/portfolio/acceuil"
 import Contact from "@/components/portfolio/contact"
 import React from "react"
-
+import Experience from "./experience"
+import Competence from "./competence"
+import Parcours from "./parcours"
 
 const Navbar = () => {
     const [selectedMenu, setSelectedMenu] = React.useState("accueil")
@@ -16,11 +18,11 @@ const Navbar = () => {
             case "accueil":
                 return <Accueil />
             case "experiance":
-                return <div><h1>Experiance</h1></div>
+                return <Experience/>
             case "parcours":
-                return <div><h1>Parcours</h1></div>
+                return <Parcours/>
             case "projets":
-                return <div><h1>Projets</h1></div>
+                return <Competence/>
             case "contact":
                 return <Contact />
             default:
@@ -36,14 +38,15 @@ const Navbar = () => {
                 <MenubarMenu>
                     <MenubarTrigger className="text-orange-500" onClick={() => setSelectedMenu("accueil")}>Accueil</MenubarTrigger>
                 </MenubarMenu>
-                <MenubarMenu>
-                    <MenubarTrigger className="text-orange-500 " onClick={() => setSelectedMenu("experiance")}>Expérience</MenubarTrigger>
-                </MenubarMenu>
+               
                 <MenubarMenu>
                     <MenubarTrigger className="text-orange-500" onClick={() => setSelectedMenu("parcours")}>Parcours</MenubarTrigger>
                 </MenubarMenu>
                 <MenubarMenu>
-                    <MenubarTrigger className="text-orange-500" onClick={() => setSelectedMenu("projets")}>Projets</MenubarTrigger>
+                    <MenubarTrigger className="text-orange-500" onClick={() => setSelectedMenu("projets")}>Compétences</MenubarTrigger>
+                </MenubarMenu>
+                <MenubarMenu>
+                    <MenubarTrigger className="text-orange-500 " onClick={() => setSelectedMenu("experiance")}>Expérience</MenubarTrigger>
                 </MenubarMenu>
                 <MenubarMenu>
                     <MenubarTrigger className="text-orange-500 " onClick={() => setSelectedMenu("contact")}>Contact</MenubarTrigger>

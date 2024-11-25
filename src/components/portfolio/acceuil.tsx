@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
+import { Download,Phone } from 'lucide-react';
 
 function Accueil() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 ">
     
-      <header className="text-center space-y-4 mt-10">
+      <header className="text-center space-y-4 mt-10 animate-pulse ">
         <h1 className="text-4xl font-bold text-orange-600">Hi, RAMARONJANAHARY</h1>
         <h2 className="text-2xl text-gray-800 font-medium">Violette Hiolimalala Harisoa Sarobidy</h2>
         <p className="text-gray-600 max-w-md mx-auto">
@@ -25,11 +26,11 @@ function Accueil() {
   
       <div className="mt-8 flex space-x-4">
         <Link href="/contact" className="px-6 py-2 bg-black text-white font-semibold rounded-lg hover:bg-gray-800" replace>
-          Me Contacter
+          Me Contacter <Phone />
         </Link>
-        <button className="px-6 py-2 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700">
-          Mon Parcours
-        </button>
+        <Link href="" className="px-6 py-2 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700">
+         Download CV <Download className='animate-bounce'/> 
+        </Link>
       </div>
 
     
