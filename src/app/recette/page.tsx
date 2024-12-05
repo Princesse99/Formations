@@ -52,7 +52,7 @@ function Page() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (item) => {
+  const openModal = (item: any) => {
     setSelectedItem(item);
     setIsModalOpen(true);
   };
