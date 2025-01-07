@@ -59,7 +59,7 @@ function Page() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedItem(null);
+    setSelectedItem(null); 
   };
 
   return (
