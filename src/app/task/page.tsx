@@ -52,9 +52,17 @@ const TestPage = () => {
     setPriorite("");
     setStatus("");
   };
-const handleDeleteTask =()=>{
-    
-}
+const handleDeleteTask =(index:number)=>{
+    const updatedTask =tasks.filter((_,i)=>i!==index);
+    setTasks(updatedTask);
+};
+const handleEditTask =(index:number)=>{
+  const task =tasks[index];
+  setTitre(task.titre);
+  setDate(task.date);
+  setPriorite(task.priorite);
+  setStatus(task.status);
+};
   return (
     <div>
       <div>
@@ -146,7 +154,10 @@ const handleDeleteTask =()=>{
                 <td className="px-6 py-4">{task.date}</td>
                 <td className="px-6 py-4">{task.priorite}</td>
                 <td className="px-6 py-4">{task.status}</td>
-                <td className="px-6 py-4">Edit | Delete</td>
+                <td className="px-6 py-4">
+                  <button onClick={()=>handleDeleteTask(index)} className="bg-red-700 text-blue-100 font-bold rounded-md w-28 h-7 ml-3">Delete</button>
+                  <button onClick={()=>handleEditTask(index)} className="bg-blue-700 text-white font-bold rounded-md w-28 h-7 ml-3">Edit</button>
+                </td>
               </tr>
             ))}
           </tbody>
